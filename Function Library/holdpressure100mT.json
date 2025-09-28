@@ -1,0 +1,136 @@
+{
+  "version": "3.0",
+  "created": "2025-09-02T14:47:51.552519",
+  "blocks": [
+    {
+      "type": "function_define",
+      "x": 200,
+      "y": 100,
+      "parameters": {
+        "function_name": "holdpressure100mT"
+      }
+    },
+    {
+      "type": "conditional",
+      "x": 200,
+      "y": 200,
+      "parameters": {
+        "condition": "pressure",
+        "operator": ">",
+        "value": 100.0
+      }
+    },
+    {
+      "type": "conditional",
+      "x": 380,
+      "y": 200,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "<",
+        "value": 100.0
+      }
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 300,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "open"
+      }
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 400,
+      "parameters": {
+        "valve": "fuel",
+        "state": "close"
+      }
+    },
+    {
+      "type": "wait_condition",
+      "x": 200,
+      "y": 480,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "<",
+        "value": 100
+      }
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 560,
+      "parameters": {
+        "valve": "fuel",
+        "state": "open"
+      }
+    },
+    {
+      "type": "endif_block",
+      "x": 200,
+      "y": 640,
+      "parameters": {}
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 300,
+      "parameters": {
+        "valve": "fuel",
+        "state": "open"
+      }
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 400,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "close"
+      }
+    },
+    {
+      "type": "wait_condition",
+      "x": 380,
+      "y": 480,
+      "parameters": {
+        "condition": "pressure",
+        "operator": ">",
+        "value": 100.0
+      }
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 560,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "open"
+      }
+    },
+    {
+      "type": "endif_block",
+      "x": 380,
+      "y": 640,
+      "parameters": {}
+    },
+    {
+      "type": "function_return",
+      "x": 200,
+      "y": 740,
+      "parameters": {}
+    }
+  ],
+  "connections": [
+    {
+      "from": 0,
+      "to": 2
+    },
+    {
+      "from": 12,
+      "to": 13
+    }
+  ]
+}

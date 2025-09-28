@@ -1,0 +1,171 @@
+{
+  "version": "6.0",
+  "created": "2025-09-08T12:57:47.911481",
+  "canvas_size": {
+    "width": 2000,
+    "height": 2000
+  },
+  "function_libraries": [
+    "/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library"
+  ],
+  "blocks": [
+    {
+      "type": "function_define",
+      "x": 200,
+      "y": 100,
+      "parameters": {
+        "function_name": "holdpressure50mT"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "conditional",
+      "x": 200,
+      "y": 200,
+      "parameters": {
+        "condition": "pressure",
+        "operator": ">",
+        "value": 50.0
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "conditional",
+      "x": 380,
+      "y": 200,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "<",
+        "value": 50.0
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 300,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "open"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 400,
+      "parameters": {
+        "valve": "fuel",
+        "state": "close"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "wait_condition",
+      "x": 200,
+      "y": 480,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "<",
+        "value": 50.0
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 200,
+      "y": 560,
+      "parameters": {
+        "valve": "fuel",
+        "state": "open"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "endif_block",
+      "x": 200,
+      "y": 640,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 300,
+      "parameters": {
+        "valve": "fuel",
+        "state": "open"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 400,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "close"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "wait_condition",
+      "x": 380,
+      "y": 480,
+      "parameters": {
+        "condition": "pressure",
+        "operator": ">",
+        "value": 50.0
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "valve_control",
+      "x": 380,
+      "y": 560,
+      "parameters": {
+        "valve": "vacuum",
+        "state": "open"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "endif_block",
+      "x": 380,
+      "y": 640,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "function_return",
+      "x": 200,
+      "y": 740,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    }
+  ],
+  "connections": [
+    {
+      "from": 0,
+      "to": 2
+    },
+    {
+      "from": 12,
+      "to": 13
+    }
+  ]
+}

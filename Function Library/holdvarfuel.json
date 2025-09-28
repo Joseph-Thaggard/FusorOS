@@ -1,0 +1,76 @@
+{
+  "version": "7.0",
+  "created": "2025-09-10T13:21:56.897124",
+  "canvas_size": {
+    "width": 2000,
+    "height": 2000
+  },
+  "function_libraries": [
+    "/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library"
+  ],
+  "blocks": [
+    {
+      "type": "function_define",
+      "x": 200,
+      "y": 100,
+      "parameters": {
+        "function_name": "holdvarfuel",
+        "function_parameters": "{pres}"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "wait_condition",
+      "x": 200,
+      "y": 180,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "<",
+        "value": "{pres}"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "conditional",
+      "x": 200,
+      "y": 260,
+      "parameters": {
+        "condition": "pressure",
+        "operator": "!=",
+        "value": "{pres}"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "function_call",
+      "x": 200,
+      "y": 340,
+      "parameters": {
+        "function_name": "holdpressurevar2",
+        "arguments": "{pres}"
+      },
+      "is_external_function": true,
+      "function_file_path": "/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library/holdpressurevar2.csv"
+    },
+    {
+      "type": "endif_block",
+      "x": 200,
+      "y": 420,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "function_return",
+      "x": 200,
+      "y": 500,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    }
+  ],
+  "connections": []
+}

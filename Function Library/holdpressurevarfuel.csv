@@ -1,0 +1,18 @@
+# Fusor AutoRun Program v7
+# Generated: 2025-09-09 10:00:34
+""
+Sequence,Step,Block_Type,Command,Parameters,X_Position,Y_Position,Is_External,Function_File
+1,1,function_define,DEFINE_FUNCTION holdpressurevarfuel(pres),"{""function_name"": ""holdpressurevarfuel"", ""function_parameters"": ""pres""}",200,100,False,
+1,2,conditional,IF PRESSURE>pres,"{""condition"": ""pressure"", ""operator"": "">"", ""value"": ""pres""}",200,200,False,
+1,3,valve_control,OPEN_VACUUM_VALVE,"{""valve"": ""vacuum"", ""state"": ""open""}",200,300,False,
+1,4,valve_control,CLOSE_FUEL_VALVE,"{""valve"": ""fuel"", ""state"": ""close""}",200,400,False,
+1,5,wait_condition,WAIT PRESSURE<pres,"{""condition"": ""pressure"", ""operator"": ""<"", ""value"": ""pres""}",200,480,False,
+1,6,valve_control,OPEN_FUEL_VALVE,"{""valve"": ""fuel"", ""state"": ""open""}",200,560,False,
+1,7,endif_block,END_IF,{},200,640,False,
+1,8,function_return,RETURN_FUNCTION,{},200,740,False,
+2,1,conditional,IF PRESSURE<pres,"{""condition"": ""pressure"", ""operator"": ""<"", ""value"": ""pres""}",380,200,False,
+2,2,valve_control,OPEN_FUEL_VALVE,"{""valve"": ""fuel"", ""state"": ""open""}",380,300,False,
+2,3,mfc_control,SET_MFC 100,"{""setpoint"": 100}",380,400,False,
+2,4,wait_condition,WAIT PRESSURE>pres,"{""condition"": ""pressure"", ""operator"": "">"", ""value"": ""pres""}",380,480,False,
+2,5,mfc_control,SET_MFC 0,"{""setpoint"": 0}",380,560,False,
+2,6,endif_block,END_IF,{},380,640,False,

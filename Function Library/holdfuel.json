@@ -1,0 +1,52 @@
+{
+  "version": "7.0",
+  "created": "2025-09-10T13:23:47.697600",
+  "canvas_size": {
+    "width": 2000,
+    "height": 2000
+  },
+  "function_libraries": [
+    "/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library"
+  ],
+  "blocks": [
+    {
+      "type": "start",
+      "x": 200,
+      "y": 100,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "function_call",
+      "x": 200,
+      "y": 260,
+      "parameters": {
+        "function_name": "holdvarfuel",
+        "arguments": "{pres}"
+      },
+      "is_external_function": true,
+      "function_file_path": "/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library/holdvarfuel.csv"
+    },
+    {
+      "type": "variable_define",
+      "x": 200,
+      "y": 180,
+      "parameters": {
+        "var_name": "pres",
+        "var_value": "35"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "end",
+      "x": 200,
+      "y": 340,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    }
+  ],
+  "connections": []
+}

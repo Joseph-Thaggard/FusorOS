@@ -1,0 +1,31 @@
+# Generated Fusor Command Sequence v7 - Full Variable Support
+# Created: 2025-09-10 13:39:08
+# Total blocks: 14
+""
+# === FUNCTION DEFINITIONS ===
+""
+FUNCTION holdpressurevar2(pres):
+    IF PRESSURE>{pres}
+        OPEN_VACUUM_VALVE
+        CLOSE_FUEL_VALVE
+        WAIT PRESSURE<{pres}
+        OPEN_FUEL_VALVE
+    END_IF
+    RETURN
+END_FUNCTION
+""
+# === MAIN PROGRAM EXECUTION ===
+""
+# Step 1: Conditional
+IF PRESSURE<{pres}
+    # Step 2: Valve Control
+    OPEN_FUEL_VALVE
+    # Step 3: Mfc Control
+    SET_MFC 100
+    # Step 4: Wait Condition
+    WAIT PRESSURE>{pres}
+    # Step 5: Mfc Control
+    SET_MFC 0
+# Step 6: End If
+END_IF
+""

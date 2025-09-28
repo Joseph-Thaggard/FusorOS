@@ -1,0 +1,19 @@
+# Generated Fusor Command Sequence v7 - Full Variable Support
+# Created: 2025-09-10 13:23:52
+# Total blocks: 4
+""
+# [AUTORUN:EXTERNAL_FUNCTIONS]
+# FUNCTION_MAP=holdvarfuel:/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library/holdvarfuel.csv
+# [/AUTORUN:EXTERNAL_FUNCTIONS]
+""
+# === MAIN PROGRAM EXECUTION ===
+""
+# Step 1: Start
+# START
+# Step 2: Variable Define
+SET_VAR pres=35
+# Step 3: Function Call
+CALL_FUNCTION holdvarfuel({pres})
+# Step 4: End
+# END
+""

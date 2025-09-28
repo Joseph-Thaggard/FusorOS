@@ -1,0 +1,26 @@
+{
+  "version": "3.0_enhanced",
+  "created": "2025-09-04T10:27:14.806951",
+  "function_libraries": [],
+  "blocks": [
+    {
+      "type": "function_define",
+      "x": 200,
+      "y": 100,
+      "parameters": {
+        "function_name": "my_function"
+      },
+      "is_external_function": false,
+      "function_file_path": null
+    },
+    {
+      "type": "function_return",
+      "x": 200,
+      "y": 180,
+      "parameters": {},
+      "is_external_function": false,
+      "function_file_path": null
+    }
+  ],
+  "connections": []
+}

@@ -1,0 +1,20 @@
+# Generated Fusor Command Sequence v7 - Full Variable Support
+# Created: 2025-09-10 13:30:27
+# Total blocks: 6
+""
+# [AUTORUN:EXTERNAL_FUNCTIONS]
+# FUNCTION_MAP=holdpressurevar2:/Users/joe/Documents/PlatformIO/Projects/FusorOS/Function Library/holdpressurevar2.csv
+# [/AUTORUN:EXTERNAL_FUNCTIONS]
+""
+# === FUNCTION DEFINITIONS ===
+""
+FUNCTION holdvarfuel3(pres):
+    WAIT PRESSURE<{pres}
+    IF PRESSURE!={pres}
+        CALL_FUNCTION holdpressurevar2({pres})
+    END_IF
+    RETURN
+END_FUNCTION
+""
+# === MAIN PROGRAM EXECUTION ===
+""
